@@ -32,6 +32,15 @@ export default function Navbar() {
                     )}
 
                     {username === 'admin' && (
+                        <Link
+                            to="/analytics"
+                            className="text-gray-700 hover:text-blue-600 transition font-medium"
+                        >
+                            📊 Analytics
+                        </Link>
+                    )}
+
+                    {username === 'admin' && (
                         <Link to="/create-product" className="text-gray-700 hover:text-blue-600">
                             🛠️ Create Product
                         </Link>

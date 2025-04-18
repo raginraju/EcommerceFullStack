@@ -34,13 +34,16 @@ export default function ReviewForm({ userId, productId, token, onSuccess, onCanc
   return (
     <div className="pt-20 mt-2 bg-white p-3 rounded shadow space-y-2">
       <input
-        type="number"
-        min="1"
-        max="5"
-        value={rating}
-        onChange={(e) => setRating(e.target.value)}
-        placeholder="Rating (1–5)"
-        className="w-full p-2 border border-gray-300 rounded"
+          type="number"
+          min="1"
+          max="5"
+          value={rating}
+          onChange={(e) => {
+            const value = Math.min(5, Number(e.target.value));
+            setRating(value);
+          }}
+          placeholder="Rating (1–5)"
+          className="w-full p-2 border border-gray-300 rounded"
       />
       <textarea
         rows="2"

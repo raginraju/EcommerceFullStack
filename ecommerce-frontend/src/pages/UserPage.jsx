@@ -141,15 +141,18 @@ export default function UserPage() {
           </div>
       
           {/* Danger Zone - Delete Account */}
-          <div className="max-w-xl mx-auto bg-white mt-6 p-6 rounded shadow border border-red-200">
-            <h3 className="text-xl font-semibold text-red-600 mb-4">Deleting your account cannot be undone.</h3>
-            <button
-              onClick={handleDeleteAccount}
-              className="bg-red-700 text-white px-4 py-2 rounded hover:bg-red-800"
-            >
-              🗑️ Delete Account
-            </button>
-          </div>
+            {localStorage.getItem('username') !== 'admin' && (
+                <div className="max-w-xl mx-auto bg-white mt-6 p-6 rounded shadow border border-red-200">
+                    <h3 className="text-xl font-semibold text-red-600 mb-4">Deleting your account cannot be undone.</h3>
+                    <button
+                        onClick={handleDeleteAccount}
+                        className="bg-red-700 text-white px-4 py-2 rounded hover:bg-red-800"
+                    >
+                        🗑️ Delete Account
+                    </button>
+                </div>
+            )}
+
         </div>
       );
       

@@ -9,6 +9,7 @@ import Orders from './pages/Orders';
 import UserPage from './pages/UserPage';
 import PaymentCallback from './pages/PaymentCallback';
 import CreateProduct from './pages/CreateProduct';
+import AdminAnalytics from './pages/AdminAnalytics';
 
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/user" element={<UserPage />} />
         <Route path="/payment/callback" element={<PaymentCallback />} />
         <Route path="/create-product" element={<CreateProduct />} />
+        <Route path="/analytics" element={<AdminAnalytics />} />
       </Routes>
     </Router>
   );
