@@ -2,15 +2,15 @@
 ----------------------------------------------------------------
    git clone https://github.com/raginraju/EcommerceFullStack.git
 
-3. Start up Docker
+2. Start up Docker
 ----------------------------------------------------------------
    docker-compose up --build
 
-5. Shutdown Docker
+3. Shutdown Docker
 ----------------------------------------------------------------
    docker-compose down
 
-7. shutting down Docker also removing data from DB
+4. shutting down Docker also removing data from DB
 ----------------------------------------------------------------
    docker-compose down -v
 
