@@ -111,7 +111,10 @@ export default function UserPage() {
                   placeholder="Username"
                   value={formData.userName}
                   onChange={handleChange}
-                  className="w-full p-2 border border-gray-300 rounded"
+                  className={`w-full p-2 border border-gray-300 rounded ${
+                      localStorage.getItem('username') === 'admin' ? 'bg-gray-100 cursor-not-allowed' : ''
+                  }`}
+                  readOnly={localStorage.getItem('username') === 'admin'}
                 />
                 <input
                   type="email"
